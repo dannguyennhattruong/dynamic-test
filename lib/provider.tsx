@@ -6,6 +6,7 @@ import type { CreateConnectorFn } from "wagmi";
 import {
   DynamicContextProvider,
   EthereumWalletConnectors,
+  TronWalletConnectors,
   DynamicWagmiConnector,
 } from "@/lib/dynamic";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
@@ -33,14 +34,14 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         //   walletConnectors: [EthereumWalletConnectors],
         //   walletConnectorExtensions: [GlobalWalletExtension]
         // }}
-        
+
         settings={{
           environmentId: process.env.NEXT_PUBLIC_DYNAMIC_ENV_ID!,
-          walletConnectors: [EthereumWalletConnectors],
+          walletConnectors: [EthereumWalletConnectors, TronWalletConnectors],
           walletConnectorExtensions:
             typeof window !== "undefined" ? [GlobalWalletExtension] : [],
           initialAuthenticationMode: "connect-only",
-          flowNetwork : "testnet"
+          flowNetwork: "testnet",
         }}
       >
         <WagmiProvider config={config}>
