@@ -11,7 +11,7 @@ import {
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import { LiFiProvider } from "./LifiProvider";
 import { config } from "./wagmi";
-
+import { GlobalWalletExtension } from "@dynamic-labs/global-wallet";
 export default function Providers({ children }: { children: React.ReactNode }) {
   const queryClient = new QueryClient();
 
@@ -26,11 +26,19 @@ export default function Providers({ children }: { children: React.ReactNode }) {
     >
       <DynamicContextProvider
         theme="auto"
+        // settings={{
+        //   environmentId:
+        //     // replace with your own environment ID
+        //     process.env.NEXT_PUBLIC_DYNAMIC_ENV_ID!,
+        //   walletConnectors: [EthereumWalletConnectors],
+        //   walletConnectorExtensions: [GlobalWalletExtension]
+        // }}
         settings={{
-          environmentId:
-            // replace with your own environment ID
-            process.env.NEXT_PUBLIC_DYNAMIC_ENV_ID!,
+          environmentId: process.env.NEXT_PUBLIC_DYNAMIC_ENV_ID!,
           walletConnectors: [EthereumWalletConnectors],
+          walletConnectorExtensions:
+            typeof window !== "undefined" ? [GlobalWalletExtension] : [],
+          initialAuthenticationMode: "connect-only",
         }}
       >
         <WagmiProvider config={config}>

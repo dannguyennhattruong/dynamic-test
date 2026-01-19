@@ -1,13 +1,35 @@
 "use client";
 
+import {
+  useDynamicContext,
+  useTelegramLogin,
+} from "@dynamic-labs/sdk-react-core";
+import { useEffect, useState } from "react";
 import MultiChainSwap from "./components/MultiChainSwap";
 import { PageLayout } from "./components/ui/PageLayout";
-
+import Spinner from "./Spinner";
 
 export default function Main() {
+  const { sdkHasLoaded, user, primaryWallet } = useDynamicContext();
+  const { telegramSignIn } = useTelegramLogin();
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+
+  useEffect(() => {
+    if (!sdkHasLoaded) return;
+
+    const signIn = async () => {
+      if (!user) {
+        await telegramSignIn({ forceCreateUser: true });
+      }
+      setIsLoading(false);
+    };
+
+    signIn();
+  }, [sdkHasLoaded, telegramSignIn, user]);
+
+  console.log(primaryWallet, "primaryWallet");
+
   return (
-    <PageLayout>
-      <MultiChainSwap />
-    </PageLayout>
+    <PageLayout>{isLoading ? <Spinner /> : <MultiChainSwap />}</PageLayout>
   );
 }

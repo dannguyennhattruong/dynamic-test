@@ -34,9 +34,12 @@ interface SwapState {
 
 export default function MultiChainSwap() {
   const { primaryWallet, sdkHasLoaded } = useDynamicContext();
-  const isConnected = !!primaryWallet;
+  const isConnected =
+  sdkHasLoaded &&
+  !!primaryWallet &&
+  !!primaryWallet.address;
   const address = primaryWallet?.address;
-  const isReady = sdkHasLoaded && isConnected && !!address;
+  const isReady = sdkHasLoaded && !!primaryWallet;
 
   const [swapState, setSwapState] = useState<SwapState>({
     fromChain: null,
@@ -134,6 +137,9 @@ export default function MultiChainSwap() {
       throw new Error("Not ready");
     }
 
+    const walletAddress = primaryWallet?.address;
+    if (!walletAddress) throw new Error("Wallet not ready");
+
     try {
       const amountInWei = parseUnits(
         swapState.amount,
@@ -146,8 +152,8 @@ export default function MultiChainSwap() {
         fromTokenAddress: swapState.fromToken.address,
         toTokenAddress: swapState.toToken.address,
         fromAmount: amountInWei.toString(),
-        fromAddress: address!,
-        toAddress: address!,
+        fromAddress: walletAddress!,
+        toAddress: walletAddress!,
         options: {
           order: "CHEAPEST",
           maxPriceImpact: 0.3,
