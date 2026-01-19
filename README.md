@@ -11,3 +11,16 @@ Steps to have the Telegram Mini App (TMA) + Bot running
 7. Go to your Telegram Bot and type `/start`
 
 [Build Around the Booming Telegram Ecosystem](https://www.dynamic.xyz/ecosystems/telegram)
+
+# How to get env values
+
+1. Visit: https://app.dynamic.xyz/ to get `NEXT_PUBLIC_DYNAMIC_ENV_ID`
+2. `LOGIN_URL` is your app domain
+3. `TELEGRAM_BOT_TOKEN` is your bot token
+
+# How to setup auto login with telegram
+
+1. Visit: https://app.dynamic.xyz/ and access `Log in and User Profile`
+2. Scroll to `Social` and find `Telegram` options
+3. Select `Your credentials` option and enter `Bot Name` and `Bot Token`
+4. Get value of `Bot Domain` and setup that to Your Bot Domain in Telegram
