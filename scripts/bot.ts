@@ -6,6 +6,7 @@ require('dotenv').config();
 // Environment variables
 const TOKEN = process.env.TELEGRAM_BOT_TOKEN;
 const LOGIN_URL = process.env.LOGIN_URL;
+console.log(TOKEN, LOGIN_URL)
 
 if (!TOKEN || !LOGIN_URL) {
   console.error(
