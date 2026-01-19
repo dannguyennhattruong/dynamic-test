@@ -684,6 +684,14 @@
     eventemitter3 "^5.0.1"
     zustand "^5.0.9"
 
+"@bigmi/react@^0.6.5":
+  version "0.6.5"
+  resolved "https://registry.yarnpkg.com/@bigmi/react/-/react-0.6.5.tgz#24b1c07e2947e0bebe40b2b02d2aea2689202613"
+  integrity sha512-6sUcRW1cdL7HRDtrurNJJnoGr6oanXd5MobPCQdulHqBsq1ycHWIyRac9/XmnfNEU05fvRPEdWRcyVrHKgv4xA==
+  dependencies:
+    "@bigmi/client" "^0.6.5"
+    "@bigmi/core" "^0.6.5"
+
 "@bitcoinerlab/secp256k1@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@bitcoinerlab/secp256k1/-/secp256k1-1.2.0.tgz#429d043ef4218b9c71915b50172e9aa4a2a8fea4"

@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@bigmi/react": "^0.6.5",
     "@dynamic-labs/ethereum": "3.6.2",
     "@dynamic-labs/ethereum-aa": "^4.55.0",
     "@dynamic-labs/global-wallet": "3.6.2",
