@@ -6,12 +6,11 @@ import {
   mainnet,
   optimism,
   polygon,
-  sepolia,
   bsc,
   tron,
 } from "wagmi/chains";
 
-const chains = [mainnet, polygon, arbitrum, optimism, base, avalanche, tron] as const;
+const chains = [mainnet, bsc, polygon, arbitrum, optimism, base, avalanche, tron] as const;
 
 // export const config = createConfig({
 //   chains,
@@ -31,6 +30,7 @@ export const config = createConfig({
   multiInjectedProviderDiscovery: false,
   ssr: true,
   transports: {
+    [bsc.id]: http(),
     [tron.id]: http(),
     [mainnet.id]: http(),
     [polygon.id]: http(),

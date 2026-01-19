@@ -33,12 +33,14 @@ export default function Providers({ children }: { children: React.ReactNode }) {
         //   walletConnectors: [EthereumWalletConnectors],
         //   walletConnectorExtensions: [GlobalWalletExtension]
         // }}
+        
         settings={{
           environmentId: process.env.NEXT_PUBLIC_DYNAMIC_ENV_ID!,
           walletConnectors: [EthereumWalletConnectors],
           walletConnectorExtensions:
             typeof window !== "undefined" ? [GlobalWalletExtension] : [],
           initialAuthenticationMode: "connect-only",
+          flowNetwork : "testnet"
         }}
       >
         <WagmiProvider config={config}>
