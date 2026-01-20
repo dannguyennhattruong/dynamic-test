@@ -8,6 +8,7 @@ import {
   EthereumWalletConnectors,
   TronWalletConnectors,
   DynamicWagmiConnector,
+  SolanaWalletConnectors,
 } from "@/lib/dynamic";
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import { LiFiProvider } from "./LifiProvider";
@@ -37,7 +38,11 @@ export default function Providers({ children }: { children: React.ReactNode }) {
 
         settings={{
           environmentId: process.env.NEXT_PUBLIC_DYNAMIC_ENV_ID!,
-          walletConnectors: [EthereumWalletConnectors, TronWalletConnectors],
+          walletConnectors: [
+            EthereumWalletConnectors,
+            SolanaWalletConnectors,
+            TronWalletConnectors,
+          ],
           walletConnectorExtensions:
             typeof window !== "undefined" ? [GlobalWalletExtension] : [],
           initialAuthenticationMode: "connect-only",

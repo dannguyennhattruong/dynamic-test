@@ -7,7 +7,7 @@ import {
   optimism,
   polygon,
   bsc,
-  tron,
+  tron
 } from "wagmi/chains";
 
 const chains = [mainnet, bsc, polygon, arbitrum, optimism, base, avalanche, tron] as const;
