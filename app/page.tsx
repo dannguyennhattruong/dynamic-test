@@ -28,7 +28,5 @@ export default function Main() {
     signIn();
   }, [sdkHasLoaded, telegramSignIn, user]);
 
-  console.log(primaryWallet, "primaryWallet");
-
   return <PageLayout>{isLoading ? <Spinner /> : <ChainPage />}</PageLayout>;
 }

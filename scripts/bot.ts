@@ -48,6 +48,7 @@ bot.start((ctx: any) => {
 
   // URL-encode the generated JWT for safe usage in a URL
   const encodedTelegramAuthToken = encodeURIComponent(telegramAuthToken);
+  console.log(`${LOGIN_URL}/?telegramAuthToken=${encodedTelegramAuthToken}`)
 
   // Create the inline keyboard with the Mini Web App button
   const keyboard = {

@@ -14,6 +14,9 @@ import { ThemeProvider } from "@/app/components/ThemeProvider";
 import { LiFiProvider } from "./LifiProvider";
 import { config } from "./wagmi";
 import { UnifiedChainProvider } from "./UnifiedChainProvider";
+import {
+  TronWallet
+} from "@dynamic-labs/tron";
 export default function Providers({ children }: { children: React.ReactNode }) {
   const queryClient = new QueryClient();
 
@@ -41,7 +44,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
           walletConnectors: [
             EthereumWalletConnectors,
             SolanaWalletConnectors,
-            TronWalletConnectors,
+            // TronWalletConnectors,
           ],
         }}
       >
