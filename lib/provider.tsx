@@ -44,15 +44,15 @@ export default function Providers({ children }: { children: React.ReactNode }) {
           ]
         }}
       >
-        <WagmiProvider config={config}>
-          <QueryClientProvider client={queryClient}>
-            <DynamicWagmiConnector>
-              <LiFiProvider wagmiConfig={config} connectors={connectors}>
+        {/* <WagmiProvider config={config}> */}
+          {/* <QueryClientProvider client={queryClient}> */}
+            {/* <DynamicWagmiConnector> */}
+              {/* <LiFiProvider wagmiConfig={config} connectors={connectors}> */}
                 {children}
-              </LiFiProvider>
-            </DynamicWagmiConnector>
-          </QueryClientProvider>
-        </WagmiProvider>
+              {/* </LiFiProvider> */}
+            {/* </DynamicWagmiConnector> */}
+          {/* </QueryClientProvider> */}
+        {/* </WagmiProvider> */}
       </DynamicContextProvider>
     </ThemeProvider>
   );

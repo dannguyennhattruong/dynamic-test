@@ -88,7 +88,7 @@ export function UnifiedChainProvider({
       return;
     }
     setAddress(primaryWallet.address);
-  }, [primaryWallet, chain]);
+  }, []);
 
   const refreshBalance = useCallback(async () => {
     if (!primaryWallet) {
@@ -103,11 +103,11 @@ export function UnifiedChainProvider({
       console.error("getBalance error", e);
       setBalance("0");
     }
-  }, [primaryWallet]);
+  }, []);
 
   useEffect(() => {
     refreshBalance();
-  }, [refreshBalance, chain]);
+  }, []);
 
   /* ---------------- BASIC ---------------- */
 
