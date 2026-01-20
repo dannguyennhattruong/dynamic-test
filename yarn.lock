@@ -802,6 +802,13 @@
   dependencies:
     "@dynamic-labs/logger" "4.55.0"
 
+"@dynamic-labs/assert-package-version@4.56.0":
+  version "4.56.0"
+  resolved "https://registry.yarnpkg.com/@dynamic-labs/assert-package-version/-/assert-package-version-4.56.0.tgz#f27c972c594dcb2d126fd851204f09c99029b82b"
+  integrity sha512-8S7pW8q3FACHPBNgjl/xV/DthNIwUmbDDHol+ttmYrb9SxzTf2BcSEzOuZuD/ubaEY3g9Ay7qTzd00mUZvm30A==
+  dependencies:
+    "@dynamic-labs/logger" "4.56.0"
+
 "@dynamic-labs/embedded-wallet-evm@3.6.2":
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/@dynamic-labs/embedded-wallet-evm/-/embedded-wallet-evm-3.6.2.tgz#92e4fb7071858b0a65c2cde8e1135bc16086aee9"
@@ -939,6 +946,16 @@
     sharp "0.33.5"
     url "0.11.0"
 
+"@dynamic-labs/iconic@4.56.0":
+  version "4.56.0"
+  resolved "https://registry.yarnpkg.com/@dynamic-labs/iconic/-/iconic-4.56.0.tgz#ccf90f8d02666250a9679ff684926b287ca82759"
+  integrity sha512-DO/OHVmcj2r8V4UWrawDyMOAhNuD9Nfim05RAcoWtVKH1EqfxOsO3BsnmcgsIxaWRGA1+A4Dv8ps5vxuVQqx6Q==
+  dependencies:
+    "@dynamic-labs/assert-package-version" "4.56.0"
+    "@dynamic-labs/logger" "4.56.0"
+    sharp "0.33.5"
+    url "0.11.0"
+
 "@dynamic-labs/logger@3.6.2":
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/@dynamic-labs/logger/-/logger-3.6.2.tgz#91b367f5ab1fded496ec1d99ad6e3906bd7843db"
@@ -948,6 +965,13 @@
   version "4.55.0"
   resolved "https://registry.yarnpkg.com/@dynamic-labs/logger/-/logger-4.55.0.tgz#747fd374ed445ec563a28921e9c13ca87ccc7671"
   integrity sha512-8aHMV8AtMtLTDZQ5ynuw72N98D/mEUfaz0XAdK1kGXkOnOlVCui8qH+5qlJfiBfSrDjlpRdLjVn8oJ9ggddn2g==
+  dependencies:
+    eventemitter3 "5.0.1"
+
+"@dynamic-labs/logger@4.56.0":
+  version "4.56.0"
+  resolved "https://registry.yarnpkg.com/@dynamic-labs/logger/-/logger-4.56.0.tgz#f97b9d7903db1751ce767c32cc376042cc3ce9d0"
+  integrity sha512-BclFXMeQuw8IsL2b0IelkxIA2FdIaZgHRQ9fhjohWQSOEkmuX74ovvXE1ByDeKxnymhTMbvc7VUIU7CgNfKl9g==
   dependencies:
     eventemitter3 "5.0.1"
 
@@ -980,6 +1004,14 @@
   dependencies:
     "@dynamic-labs/assert-package-version" "4.55.0"
     "@dynamic-labs/types" "4.55.0"
+
+"@dynamic-labs/rpc-providers@4.56.0":
+  version "4.56.0"
+  resolved "https://registry.yarnpkg.com/@dynamic-labs/rpc-providers/-/rpc-providers-4.56.0.tgz#1781331f8470870fc3ed9f6719901456976567d8"
+  integrity sha512-DYJrc5qHZ2HuiQSjFYQt2dGa4/Mn8zBfClOMKQj5lsNu5J5rsbJvjzhKIPgyRaa08oasy9lLosrj5X0v4Z8MZA==
+  dependencies:
+    "@dynamic-labs/assert-package-version" "4.56.0"
+    "@dynamic-labs/types" "4.56.0"
 
 "@dynamic-labs/sdk-api-core@0.0.563":
   version "0.0.563"
@@ -1027,6 +1059,22 @@
     "@dynamic-labs/sdk-api-core" "0.0.563"
     "@solana/spl-token" "0.4.6"
     "@solana/web3.js" "1.92.1"
+
+"@dynamic-labs/solana-core@^4.56.0":
+  version "4.56.0"
+  resolved "https://registry.yarnpkg.com/@dynamic-labs/solana-core/-/solana-core-4.56.0.tgz#81c0038bf41dfa0df931e9afff6ed456bcb3b6c5"
+  integrity sha512-86+N0Npa/VxEWHi3Eb07CKN+CkG6b1G9s5ZiWCoSImntvwulJMOOai9EuGZsttbMsc63LSF5FPdtJuE+fr/QXw==
+  dependencies:
+    "@dynamic-labs/assert-package-version" "4.56.0"
+    "@dynamic-labs/rpc-providers" "4.56.0"
+    "@dynamic-labs/sdk-api-core" "0.0.855"
+    "@dynamic-labs/types" "4.56.0"
+    "@dynamic-labs/utils" "4.56.0"
+    "@dynamic-labs/wallet-book" "4.56.0"
+    "@dynamic-labs/wallet-connector-core" "4.56.0"
+    "@solana/spl-token" "0.4.12"
+    "@solana/web3.js" "1.98.1"
+    eventemitter3 "5.0.1"
 
 "@dynamic-labs/solana@3.6.2":
   version "3.6.2"
@@ -1088,6 +1136,14 @@
     "@dynamic-labs/assert-package-version" "4.55.0"
     "@dynamic-labs/sdk-api-core" "0.0.855"
 
+"@dynamic-labs/types@4.56.0":
+  version "4.56.0"
+  resolved "https://registry.yarnpkg.com/@dynamic-labs/types/-/types-4.56.0.tgz#4309fcdf2e376f604f42415467015377ce6a5cf2"
+  integrity sha512-nh87w2fX09fnlBQN0W9SIXq0FTrH5B6c7MOUZLlt7iqLWDTsX9fIGrMcK8f9QbQhQGf8YeZgR2QwTyrHz+QDXQ==
+  dependencies:
+    "@dynamic-labs/assert-package-version" "4.56.0"
+    "@dynamic-labs/sdk-api-core" "0.0.855"
+
 "@dynamic-labs/utils@3.6.2":
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/@dynamic-labs/utils/-/utils-3.6.2.tgz#a9527f00edf0ebfe5534e8394d2ba304591f324d"
@@ -1110,6 +1166,19 @@
     "@dynamic-labs/logger" "4.55.0"
     "@dynamic-labs/sdk-api-core" "0.0.855"
     "@dynamic-labs/types" "4.55.0"
+    buffer "6.0.3"
+    eventemitter3 "5.0.1"
+    tldts "6.0.16"
+
+"@dynamic-labs/utils@4.56.0":
+  version "4.56.0"
+  resolved "https://registry.yarnpkg.com/@dynamic-labs/utils/-/utils-4.56.0.tgz#9c12e87a3f4e8dbd9d85d924aeae476346632485"
+  integrity sha512-+5fnUuajYjoQvA6frGbWoHce2+kE2ZexQYL0lq+2msZU47isD0NbFiTuIQXHC0mi6ZArw3YcPWCV3VMQ351K1A==
+  dependencies:
+    "@dynamic-labs/assert-package-version" "4.56.0"
+    "@dynamic-labs/logger" "4.56.0"
+    "@dynamic-labs/sdk-api-core" "0.0.855"
+    "@dynamic-labs/types" "4.56.0"
     buffer "6.0.3"
     eventemitter3 "5.0.1"
     tldts "6.0.16"
@@ -1144,6 +1213,19 @@
     util "0.12.5"
     zod "4.0.5"
 
+"@dynamic-labs/wallet-book@4.56.0":
+  version "4.56.0"
+  resolved "https://registry.yarnpkg.com/@dynamic-labs/wallet-book/-/wallet-book-4.56.0.tgz#a8433394d79ef29fee4df57c5b8814550116bf38"
+  integrity sha512-lAM8HOG8MBWe/hx6DSch6/ISq5mmJeAMg03tpe4JpYS5g5ucd8cWtaBsxsKymZBXxP7uNFD3AeRzuB7FA+45nQ==
+  dependencies:
+    "@dynamic-labs/assert-package-version" "4.56.0"
+    "@dynamic-labs/iconic" "4.56.0"
+    "@dynamic-labs/logger" "4.56.0"
+    "@dynamic-labs/utils" "4.56.0"
+    eventemitter3 "5.0.1"
+    util "0.12.5"
+    zod "4.0.5"
+
 "@dynamic-labs/wallet-connector-core@3.6.2":
   version "3.6.2"
   resolved "https://registry.yarnpkg.com/@dynamic-labs/wallet-connector-core/-/wallet-connector-core-3.6.2.tgz#782c4fd0ce4a7710495db38a5f0c560fbe81433e"
@@ -1163,6 +1245,20 @@
     "@dynamic-labs/types" "4.55.0"
     "@dynamic-labs/utils" "4.55.0"
     "@dynamic-labs/wallet-book" "4.55.0"
+    eventemitter3 "5.0.1"
+
+"@dynamic-labs/wallet-connector-core@4.56.0":
+  version "4.56.0"
+  resolved "https://registry.yarnpkg.com/@dynamic-labs/wallet-connector-core/-/wallet-connector-core-4.56.0.tgz#4b30ba823c81261bc18f1f12e2a66ea09fdc93f6"
+  integrity sha512-Yhch2uhB2DsooJ983VEbxJ1DyZzjiNUBCBaHCTc7SIdMbqWzb9BMPLHyDzYLbGu6tgt8c2oJaDTtaIGsQ2CVKw==
+  dependencies:
+    "@dynamic-labs/assert-package-version" "4.56.0"
+    "@dynamic-labs/logger" "4.56.0"
+    "@dynamic-labs/rpc-providers" "4.56.0"
+    "@dynamic-labs/sdk-api-core" "0.0.855"
+    "@dynamic-labs/types" "4.56.0"
+    "@dynamic-labs/utils" "4.56.0"
+    "@dynamic-labs/wallet-book" "4.56.0"
     eventemitter3 "5.0.1"
 
 "@dynamic-labs/webauthn@3.6.2":
@@ -4091,12 +4187,30 @@
     "@solana/codecs" "2.0.0-preview.2"
     "@solana/spl-type-length-value" "0.1.0"
 
-"@solana/spl-token-metadata@^0.1.4":
+"@solana/spl-token-group@^0.0.7":
+  version "0.0.7"
+  resolved "https://registry.yarnpkg.com/@solana/spl-token-group/-/spl-token-group-0.0.7.tgz#83c00f0cd0bda33115468cd28b89d94f8ec1fee4"
+  integrity sha512-V1N/iX7Cr7H0uazWUT2uk27TMqlqedpXHRqqAbVO2gvmJyT0E0ummMEAVQeXZ05ZhQ/xF39DLSdBp90XebWEug==
+  dependencies:
+    "@solana/codecs" "2.0.0-rc.1"
+
+"@solana/spl-token-metadata@^0.1.4", "@solana/spl-token-metadata@^0.1.6":
   version "0.1.6"
   resolved "https://registry.yarnpkg.com/@solana/spl-token-metadata/-/spl-token-metadata-0.1.6.tgz#d240947aed6e7318d637238022a7b0981b32ae80"
   integrity sha512-7sMt1rsm/zQOQcUWllQX9mD2O6KhSAtY1hFR2hfFwgqfFWzSY9E9GDvFVNYUI1F0iQKcm6HmePU9QbKRXTEBiA==
   dependencies:
     "@solana/codecs" "2.0.0-rc.1"
+
+"@solana/spl-token@0.4.12":
+  version "0.4.12"
+  resolved "https://registry.yarnpkg.com/@solana/spl-token/-/spl-token-0.4.12.tgz#09361f9c8116f277b177dbcae7e3a273a19cd48a"
+  integrity sha512-K6CxzSoO1vC+WBys25zlSDaW0w4UFZO/IvEZquEI35A/PjqXNQHeVigmDCZYEJfESvYarKwsr8tYr/29lPtvaw==
+  dependencies:
+    "@solana/buffer-layout" "^4.0.0"
+    "@solana/buffer-layout-utils" "^0.2.0"
+    "@solana/spl-token-group" "^0.0.7"
+    "@solana/spl-token-metadata" "^0.1.6"
+    buffer "^6.0.3"
 
 "@solana/spl-token@0.4.6":
   version "0.4.6"
@@ -4273,7 +4387,7 @@
     "@solana/wallet-standard-core" "^1.1.2"
     "@solana/wallet-standard-wallet-adapter" "^1.1.4"
 
-"@solana/web3.js@1.91.6", "@solana/web3.js@1.92.1", "@solana/web3.js@^1.32.0", "@solana/web3.js@^1.88.1", "@solana/web3.js@^1.98.1", "@solana/web3.js@^1.98.4":
+"@solana/web3.js@1.91.6", "@solana/web3.js@1.92.1", "@solana/web3.js@1.98.1", "@solana/web3.js@^1.32.0", "@solana/web3.js@^1.88.1", "@solana/web3.js@^1.98.1", "@solana/web3.js@^1.98.4":
   version "1.91.6"
   resolved "https://registry.yarnpkg.com/@solana/web3.js/-/web3.js-1.91.6.tgz#c090661c344cbc61e6cdeb0da67d3ea80d5848e1"
   integrity sha512-dm20nN6HQvXToo+kM51nxHdtaa2wMSRdeK37p+WIWESfeiVHqV8XbV4XnWupq6ngt5vIckhGFG7ZnTBxUgLzDA==

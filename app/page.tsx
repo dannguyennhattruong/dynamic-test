@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import MultiChainSwap from "./components/MultiChainSwap";
 import { PageLayout } from "./components/ui/PageLayout";
 import Spinner from "./Spinner";
+import ChainPage from "./components/Home";
 
 export default function Main() {
   const { sdkHasLoaded, user, primaryWallet } = useDynamicContext();
@@ -29,7 +30,5 @@ export default function Main() {
 
   console.log(primaryWallet, "primaryWallet");
 
-  return (
-    <PageLayout>{isLoading ? <Spinner /> : <MultiChainSwap />}</PageLayout>
-  );
+  return <PageLayout>{isLoading ? <Spinner /> : <ChainPage />}</PageLayout>;
 }

@@ -12,19 +12,6 @@ import {
 
 const chains = [mainnet, bsc, polygon, arbitrum, optimism, base, avalanche, tron] as const;
 
-// export const config = createConfig({
-//   chains,
-//   multiInjectedProviderDiscovery: false,
-//   ssr: true,
-//   transports: {
-//     [mainnet.id]: http(),
-//     [polygon.id]: http(),
-//     [arbitrum.id]: http(),
-//     [optimism.id]: http(),
-//     [base.id]: http(),
-//     [avalanche.id]: http(),
-//   },
-// });
 export const config = createConfig({
   chains,
   multiInjectedProviderDiscovery: false,

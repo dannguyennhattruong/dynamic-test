@@ -13,7 +13,6 @@ import {
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import { LiFiProvider } from "./LifiProvider";
 import { config } from "./wagmi";
-import { GlobalWalletExtension } from "@dynamic-labs/global-wallet";
 export default function Providers({ children }: { children: React.ReactNode }) {
   const queryClient = new QueryClient();
 
@@ -42,11 +41,7 @@ export default function Providers({ children }: { children: React.ReactNode }) {
             EthereumWalletConnectors,
             SolanaWalletConnectors,
             TronWalletConnectors,
-          ],
-          walletConnectorExtensions:
-            typeof window !== "undefined" ? [GlobalWalletExtension] : [],
-          initialAuthenticationMode: "connect-only",
-          flowNetwork: "testnet",
+          ]
         }}
       >
         <WagmiProvider config={config}>

@@ -20,7 +20,7 @@ export const initializeLiFiConfig = (wagmiConfig: Config) => {
 export const loadLiFiChains = async () => {
   try {
     const chains = await getChains({
-      chainTypes: [ChainType.EVM],
+      chainTypes: [ChainType.EVM, ChainType.SVM, ChainType.TVM, ChainType.MVM, ChainType.UTXO],
     });
     return chains;
   } catch {
