@@ -13,6 +13,7 @@ import {
 import { ThemeProvider } from "@/app/components/ThemeProvider";
 import { LiFiProvider } from "./LifiProvider";
 import { config } from "./wagmi";
+import { UnifiedChainProvider } from "./UnifiedChainProvider";
 export default function Providers({ children }: { children: React.ReactNode }) {
   const queryClient = new QueryClient();
 
@@ -41,17 +42,17 @@ export default function Providers({ children }: { children: React.ReactNode }) {
             EthereumWalletConnectors,
             SolanaWalletConnectors,
             TronWalletConnectors,
-          ]
+          ],
         }}
       >
         {/* <WagmiProvider config={config}> */}
-          {/* <QueryClientProvider client={queryClient}> */}
-            {/* <DynamicWagmiConnector> */}
-              {/* <LiFiProvider wagmiConfig={config} connectors={connectors}> */}
-                {children}
-              {/* </LiFiProvider> */}
-            {/* </DynamicWagmiConnector> */}
-          {/* </QueryClientProvider> */}
+        {/* <QueryClientProvider client={queryClient}> */}
+        {/* <DynamicWagmiConnector> */}
+        {/* <LiFiProvider wagmiConfig={config} connectors={connectors}> */}
+        <UnifiedChainProvider>{children}</UnifiedChainProvider>
+        {/* </LiFiProvider> */}
+        {/* </DynamicWagmiConnector> */}
+        {/* </QueryClientProvider> */}
         {/* </WagmiProvider> */}
       </DynamicContextProvider>
     </ThemeProvider>
